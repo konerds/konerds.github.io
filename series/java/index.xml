@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java on Konerd Here!</title>
+    <link>https://konerds.github.io/series/java/</link>
+    <description>Recent content in java on Konerd Here!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>adr10won@gmail.com (konerds)</managingEditor>
+    <webMaster>adr10won@gmail.com (konerds)</webMaster>
+    <lastBuildDate>Tue, 28 Nov 2023 04:14:32 +0900</lastBuildDate>
+    <atom:link href="https://konerds.github.io/series/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Into the JAVA</title>
+      <link>https://konerds.github.io/all/java/1/</link>
+      <pubDate>Tue, 28 Nov 2023 04:14:32 +0900</pubDate><author>adr10won@gmail.com (konerds)</author>
+      <guid>https://konerds.github.io/all/java/1/</guid>
+      <description>Overview 본 자바 짜깁기 시리즈에서는 다양한 자바 강의 및 관련 서적의 내용들을 정리하는 것을 목표로 합니다.
+여러 소스를 통해 자바에 대한 전체적인 관점을 학습하고 정리해볼 예정입니다.
+Why 자바는 이식성, 안정성 및 다양성을 통해 프로그래밍 언어 세계에서 여전히 확고한 위치를 유지하고 있고
+심지어 계속해서 변화하며 발전하고 있기에 개발자들 사이에서 가장 선호되는 언어 중 하나라고 생각합니다.
+번역하고 요약한 내용을 통해 자바의 기초를 다질 수 있는 계기가 되었으면 합니다.
+Comment 시리즈의 내용들은 초안으로 유지되지 않으며 시간이 지남에 따라 지속적으로 수정 및 개선될 수 있습니다.</description>
+    </item>
+  </channel>
+</rss>
