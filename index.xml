@@ -8,8 +8,17 @@
     <language>en-us</language>
     <managingEditor>adr10won@gmail.com (konerds)</managingEditor>
     <webMaster>adr10won@gmail.com (konerds)</webMaster>
-    <lastBuildDate>Tue, 28 Nov 2023 04:14:32 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Nov 2023 17:01:50 +0900</lastBuildDate>
     <atom:link href="https://konerds.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JAVA, Ecosystem, JVM</title>
+      <link>https://konerds.github.io/all/java/2/</link>
+      <pubDate>Thu, 30 Nov 2023 17:01:50 +0900</pubDate><author>adr10won@gmail.com (konerds)</author>
+      <guid>https://konerds.github.io/all/java/2/</guid>
+      <description>Understanding Java 1990년대 후반부터 프로그래밍 세계의 충실한 역할을 해 온 Java는 지금까지도 비즈니스 및 엔터프라이즈 컴퓨팅 분야의 강자로 자리매김하고 있습니다.
+가독성과 학습 용이성으로 잘 알려진 Java 는 C++ 와 같은 언어에 대한 업계 경험을 바탕으로 구축되었으며, 보다 더 객체지향적으로 설계되었습니다.
+1996년 이후의 보수적인 발전은 안정적인 기반을 제공해왔으며, Java 8 버전부터는 이전 버전과의 호환성을 유지하면서 기존 LISP 와 같은 언어에서 람다 표현식과 같은 기능을 차용하여 최신 프로그래밍 패러다임을 수용하는 Java 의 행보를 보여줍니다.</description>
+    </item>
     <item>
       <title>Into the JAVA</title>
       <link>https://konerds.github.io/all/java/1/</link>
