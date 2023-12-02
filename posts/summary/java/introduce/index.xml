@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Konerd Here!</title>
-    <link>https://konerds.github.io/</link>
-    <description>Recent content on Konerd Here!</description>
+    <title>Introduce on Konerd Here!</title>
+    <link>https://konerds.github.io/posts/summary/java/introduce/</link>
+    <description>Recent content in Introduce on Konerd Here!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>adr10won@gmail.com (konerds)</managingEditor>
     <webMaster>adr10won@gmail.com (konerds)</webMaster>
     <lastBuildDate>Thu, 30 Nov 2023 17:01:50 +0900</lastBuildDate>
-    <atom:link href="https://konerds.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://konerds.github.io/posts/summary/java/introduce/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JAVA, Ecosystem, JVM</title>
       <link>https://konerds.github.io/posts/summary/java/introduce/1/</link>
@@ -18,16 +18,6 @@
       <description>Understanding Java 1990년대 후반부터 프로그래밍 세계의 충실한 역할을 해 온 Java는 지금까지도 비즈니스 및 엔터프라이즈 컴퓨팅 분야의 강자로 자리매김하고 있습니다.
 가독성과 학습 용이성으로 잘 알려진 Java 는 C++ 와 같은 언어에 대한 업계 경험을 바탕으로 구축되었으며, 보다 더 객체지향적으로 설계되었습니다.
 1996년 이후의 보수적인 발전은 안정적인 기반을 제공해왔으며, Java 8 버전부터는 이전 버전과의 호환성을 유지하면서 기존 LISP 와 같은 언어에서 람다 표현식과 같은 기능을 차용하여 최신 프로그래밍 패러다임을 수용하는 Java 의 행보를 보여줍니다.</description>
-    </item>
-    <item>
-      <title>Developement Archive</title>
-      <link>https://konerds.github.io/about/</link>
-      <pubDate>Mon, 27 Nov 2023 02:37:53 +0900</pubDate><author>adr10won@gmail.com (konerds)</author>
-      <guid>https://konerds.github.io/about/</guid>
-      <description> 개발 분야로 진로를 정한 이후 처음으로 만들어 본 블로그입니다.
-학습했던 내용들을 정리하여 말로 전달하는 능력을 기르고 싶습니다.
-모두 담아내기는 쉽지 않겠지만 블로그를 통해 조금씩 채워나가보려고 합니다.
-while (true) { letsDoCoding247(); if (false) { break; } } </description>
     </item>
   </channel>
 </rss>

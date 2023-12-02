@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://konerds.github.io/posts/summary/java/introduce/1/</loc>
+    <lastmod>2023-11-30T17:01:50+09:00</lastmod>
+  </url><url>
     <loc>https://konerds.github.io/</loc>
     <lastmod>2023-11-30T17:01:50+09:00</lastmod>
   </url><url>
-    <loc>https://konerds.github.io/posts/summary/java/</loc>
+    <loc>https://konerds.github.io/posts/summary/java/introduce/</loc>
     <lastmod>2023-11-30T17:01:50+09:00</lastmod>
   </url><url>
-    <loc>https://konerds.github.io/posts/summary/java/2/</loc>
+    <loc>https://konerds.github.io/posts/summary/java/</loc>
     <lastmod>2023-11-30T17:01:50+09:00</lastmod>
   </url><url>
     <loc>https://konerds.github.io/posts/</loc>
@@ -16,9 +19,6 @@
   </url><url>
     <loc>https://konerds.github.io/posts/summary/</loc>
     <lastmod>2023-11-30T17:01:50+09:00</lastmod>
-  </url><url>
-    <loc>https://konerds.github.io/posts/summary/java/1/</loc>
-    <lastmod>2023-11-28T04:14:32+09:00</lastmod>
   </url><url>
     <loc>https://konerds.github.io/about/</loc>
     <lastmod>2023-11-27T02:37:53+09:00</lastmod>
