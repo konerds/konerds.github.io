@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>
+      Java 프로그램의 생명주기 | konerds
+    </title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+/>
+<meta name="generator" content="Hugo 0.120.4">
+
+<link rel="canonical" href="https://konerds.github.io/posts/summary/java/introduce/3/" />
+<link href="/sass/main.min.44df6b98c301d60a529ef9e2b108d780eda420acd690758defc00acd4b88b109.css" rel="stylesheet" />
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-ZE9VCB7TLT"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-ZE9VCB7TLT");
+</script>
+
+
+  </head>
+  <body>
+    <div class="flexWrapper">
+      <header class="headerWrapper">
+  <div class="header">
+    <div>
+      <a href="https://konerds.github.io">
+        <span class="terminal"
+          >konerds@github.io ~ $</span
+        >
+      </a>
+    </div>
+    <input class="side-menu" type="checkbox" id="side-menu" />
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+    <nav class="headerLinks">
+      <ul>
+        
+          <li>
+            <a href="https://konerds.github.io/about" title="">
+              ~/about</a>
+          </li>
+        
+          <li>
+            <a href="https://konerds.github.io/posts" title="">
+              ~/posts</a>
+          </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+      <div class="content">
+        <main class="main">
+          
+  <div class="postWrapper">
+    <nav aria-label="breadcrumb" class="breadcrumb">
+  <ol>
+    
+      <li>
+        <a href="/"></a>
+      </li>
+    
+      <li>
+        <a href="/posts/">Posts</a>
+      </li>
+    
+      <li>
+        <a href="/posts/summary/">Summary</a>
+      </li>
+    
+      <li>
+        <a href="/posts/summary/java/">Java</a>
+      </li>
+    
+      <li>
+        <a href="/posts/summary/java/introduce/">Java 환경 소개</a>
+      </li>
+    
+  </ol>
+</nav>
+
+    <h1>
+      
+        #3 -
+      
+      Java 프로그램의 생명주기
+    </h1>
+    
+      <section class="postMetadata">
+        <dl>
+          
+          
+          
+          
+            <dt>published</dt>
+            
+            <dd>
+              <time datetime="2023-12-03"
+                >December 3, 2023</time
+              >
+            </dd>
+          
+          
+            <dt>reading time</dt>
+            <dd>3 minutes</dd>
+          
+        </dl>
+      </section>
+    
+    <div><h1 id="java-프로그램의-생명주기">Java 프로그램의 생명주기</h1>
+<p>Java 코드가 컴파일 및 실행되는 과정을 알아보겠습니다.</p>
+<p>먼저 Java 소스 코드 .java 파일은 자바 컴파일러 javac 프로그램을 통해 Java 바이트 코드 .class 파일로 컴파일됩니다.
+.class 파일은 플랫폼이 처리할 기능의 가장 작은 단위이며, 실행 중인 프로그램에 새로운 코드를 추가하는 유일한 방법입니다.
+새로운 클래스 파일은 JVM 클래스 로더를 통해 온보딩되며, 인터프리터와 JIT 컴파일러를 통해 최종적으로 기계가 이해할 수 있는 머신 코드로 변환됩니다.</p>
+<hr />
+<br />
+<h2 id="자주-묻는-질문">자주 묻는 질문</h2>
+<h3 id="바이트-코드란-무엇입니까">바이트 코드란 무엇입니까?</h3>
+<p>개발자가 JVM 을 처음 접할 때 종종 &ldquo;컴퓨터 안의 컴퓨터&rdquo; 라고 생각합니다.
+그러면 바이트 코드를 &ldquo;내부 컴퓨터의 CPU 를 위한 머신 코드&rdquo; 또는 &ldquo;구성된 프로세서를 위한 머신 코드&rdquo; 로 상상하기 쉽습니다.</p>
+<p>그렇지만 사실 바이트 코드는 실제 하드웨어 프로세서에서 실행되는 머신 코드와 그다지 유사하지 않습니다.
+컴퓨터 과학자들은 바이트 코드를 일종의 IR(Intermediate Representation), 즉 소스 코드와 머신 코드 사이의 중간 지점으로 정의합니다.
+바이트 코드는 본질적으로 JVM 인터프리터에서 효율적으로 실행될 수 있는 형식으로 설계된 스택 기반의 IR 입니다.</p>
+<h3 id="javac-는-컴파일러인가요">javac 는 컴파일러인가요?</h3>
+<p>컴파일러는 머신 코드를 생성하는 것이 일반적이지만, 자바 컴파일러 javac 프로그램은 머신 코드가 아닌 Java 바이트 코드를 생성합니다.
+바이트 코드 .class 파일은 Windows 의 .dll 파일이나 Unix 의 .so 파일 같은 일종의 오브젝트 파일과 유사하며, 확실히 사람이 읽을 수 있는 코드는 아닙니다.</p>
+<p>이론적으로 javac 는 컴파일러의 &ldquo;front-half&rdquo; 와 가장 유사하며, 머신 코드를 생성하기 위해 필요한 IR 을 생성하는 프로그램입니다.
+그러나 이러한 .class 파일 생성은 C/C++ 컴파일 단계와 유사한 별도의 빌드 단계이므로 많은 개발자는 javac 실행 역시 컴파일 과정으로 간주합니다.</p>
+<p>본질적인 컴파일의 의미로 바라보면 실제로 머신 코드를 생성하는 것은 JVM 의 인터프리터와 JIT 컴파일러입니다.</p>
+<h3 id="왜-바이트-코드라고-불리는가">왜 바이트 코드라고 불리는가?</h3>
+<p>명령 코드(opcode)는 단일 바이트이므로(일부 명령어들은 바이트 스트림에서 뒤에 오는 매개변수를 가짐), 가능한 명령어는 256개뿐입니다.</p>
+<p>약 200개 정도의 명렁어들이 사용 중이지만, 일부 명령어들은 최신 버전의 javac 프로그램에서 사용 및 생성되지 않습니다.</p>
+<h3 id="바이트-코드는-최적화되어-있나요">바이트 코드는 최적화되어 있나요?</h3>
+<p>플랫폼 초기에 javac 프로그램은 과도하게 최적화된 바이트 코드를 생성해냈으나, 이런 접근 방식은 오히려 실수로 판단되고 재검토되었습니다.
+JIT 컴파일러의 도입으로 중요한 메서드들이 이미 매우 빠른 기계어 코드로 컴파일될 수 있기에, 성능 면에서 훨씬 더 큰 이점을 얻을 수 있기 때문입니다.</p>
+<h3 id="바이트-코드는-정말-기계-독립적인가요-endianness-같은-것은-어떻습니까">바이트 코드는 정말 기계 독립적인가요? Endianness 같은 것은 어떻습니까?</h3>
+<p>네, Java 바이트 코드는 생성된 시스템 유형에 관계없이 항상 큰 단위가 앞으로 나오는 Big-endian 형식으로 동일하게 저장됩니다.</p>
+<h6 id="-endianness--컴퓨터의-메모리와-같은-1차원의-공간에-여러-개의-연속된-대상을-배열하는-방법-바이트를-배열하는-방법의-경우-바이트-순서라고도-함">* Endianness : 컴퓨터의 메모리와 같은 1차원의 공간에 여러 개의 연속된 대상을 배열하는 방법 (바이트를 배열하는 방법의 경우, 바이트 순서라고도 함)</h6>
+<h3 id="java-언어는-인터프리터-언어인가요">Java 언어는 인터프리터 언어인가요?</h3>
+<p>PHP, Perl, Ruby, Python 등 대부분의 인터프리터 언어는 입력된 소스 코드 파일을 통해 AST(Abstract Syntax Tree)를 구성하여 해석합니다.</p>
+<p>반면 Java 환경에서는 javac 프로그램을 사용하여 소스 코드를 바이트 코드로 컴파일 한 뒤, 런타임 단계에서 JVM 인터프리터에 소스 코드 파일이 아닌 바이트 코드를 전달하여 JIT 컴파일러의 도움을 받으며 이를 머신 코드로 변환합니다.</p>
+<p>따라서 Java 언어는 본질적으로 인터프리터 언어에 속하나, 컴파일 단계와 인터프리팅 단계를 모두 거치는 하이브리드 언어로 알려져 있습니다.</p>
+<h3 id="jvm-에서-다른-언어를-실행할-수-있나요">JVM 에서 다른 언어를 실행할 수 있나요?</h3>
+<p>네, 대표적으로 Kotlin, Groovy, Closure, Scala, JRuby, Jython 을 들 수 있으며, 독자적인 방법을 거쳐 JVM 에서 실행됩니다.</p>
+<p>예시로 Scala 소스 코드는 Scala 컴파일러에 의해 JVM 에서 실행 가능한 Java 바이트 코드로 컴파일됩니다.
+따라서 Java 로 작성된 프로그램과 완벽히 호환되며, Java 표준 라이브러리를 비롯하여 Java 언어로 작성된 외부 라이브러리도 함께 사용될 수 있습니다.
+Java 바이트 코드 수준이 아닌 컴파일 단계에서 함께 사용하는 것도 가능하기 때문에, 한 프로젝트에서 상호 의존적인 Java 소스 코드와 Scala 소스 코드를 함께 사용할 수도 있습니다.</p>
+<p>다른 예시로 해당 언어에 특화된 인터프리터와 런타임 환경을 Java 로 구현하여 JVM 에서 실행되는 경우도 있습니다.</p>
+<br /></div>
+    <nav>
+      <div class="prev">
+        
+          <a href="/posts/summary/java/introduce/2/">Java, JVM 의 간략한 역사</a>
+        
+      </div>
+      <div class="next">
+        
+          <a href="/posts/summary/java/introduce/4/">Java 보안</a>
+        
+      </div>
+    </nav>
+  </div>
+  <script
+  src="https://utteranc.es/client.js"
+  repo="konerds/konerds.github.io"
+  issue-term="pathname"
+  label="comment"
+  theme="dark-blue"
+  crossorigin="anonymous"
+  async
+></script>
+
+
+        </main>
+      </div>
+      <footer class="footer">
+  
+    <span>
+      © 2023 konerds,
+      Built with
+      <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+      <a
+        href="https://github.com/LordMathis/hugo-theme-nightfall"
+        class="footerLink"
+        >Nightfall</a
+      >
+      theme
+    </span>
+  
+</footer>
+
+    </div>
+  </body>
+</html>
+
