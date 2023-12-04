@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>
+      Java에 대한 일부 비판에 대한 답변 | konerds
+    </title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+/>
+<meta name="generator" content="Hugo 0.120.4">
+
+<link rel="canonical" href="https://konerds.github.io/posts/summary/java/introduce/6/" />
+<link href="/sass/main.min.44df6b98c301d60a529ef9e2b108d780eda420acd690758defc00acd4b88b109.css" rel="stylesheet" />
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-ZE9VCB7TLT"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-ZE9VCB7TLT");
+</script>
+
+
+  </head>
+  <body>
+    <div class="flexWrapper">
+      <header class="headerWrapper">
+  <div class="header">
+    <div>
+      <a href="https://konerds.github.io">
+        <span class="terminal"
+          >konerds@github.io ~ $</span
+        >
+      </a>
+    </div>
+    <input class="side-menu" type="checkbox" id="side-menu" />
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+    <nav class="headerLinks">
+      <ul>
+        
+          <li>
+            <a href="https://konerds.github.io/about" title="">
+              ~/about</a>
+          </li>
+        
+          <li>
+            <a href="https://konerds.github.io/posts" title="">
+              ~/posts</a>
+          </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+      <div class="content">
+        <main class="main">
+          
+  <div class="postWrapper">
+    <nav aria-label="breadcrumb" class="breadcrumb">
+  <ol>
+    
+      <li>
+        <a href="/"></a>
+      </li>
+    
+      <li>
+        <a href="/posts/">Posts</a>
+      </li>
+    
+      <li>
+        <a href="/posts/summary/">Summary</a>
+      </li>
+    
+      <li>
+        <a href="/posts/summary/java/">Java</a>
+      </li>
+    
+      <li>
+        <a href="/posts/summary/java/introduce/">Java 환경 소개</a>
+      </li>
+    
+  </ol>
+</nav>
+
+    <h1>
+      
+        #6 -
+      
+      Java에 대한 일부 비판에 대한 답변
+    </h1>
+    
+      <section class="postMetadata">
+        <dl>
+          
+          
+          
+          
+            <dt>published</dt>
+            
+            <dd>
+              <time datetime="2023-12-03"
+                >December 3, 2023</time
+              >
+            </dd>
+          
+          
+            <dt>reading time</dt>
+            <dd>3 minutes</dd>
+          
+        </dl>
+      </section>
+    
+    <div><h1 id="java-에-대한-일부-비판에-대한-답변">Java 에 대한 일부 비판에 대한 답변</h1>
+<p>Java 는 대중의 주목을 받으며 오랜 역사를 거쳐 발전해오고 있으나, 그 과정에 있어서 상당한 비판 역시 받아왔습니다.
+이 중 일부는 Java 의 첫 번째 버전 출시 때 진행된 다소 지나친 마케팅과 결합된 몇 가지 기술적인 단점이 그 원인으로 꼽힙니다.</p>
+<hr />
+<br />
+<h2 id="지나치게-장황한-내용">지나치게 장황한 내용</h2>
+<p>Java 언어는 종종 지나치게 장황하다는 비판을 받아왔습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span>Object o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Object();
+</span></span></code></pre></div><p>위와 같은 간단한 객체 생성 및 참조 변수 할당 코드를 살펴봐도 좌변과 우변에 타입이 반복적으로 등장합니다.
+비평가들은 이런 표현이 다른 언어에서와 달리 본질적으로 중복되고 타입 추론을 지원하지 않는다는 점에 대해서 지적해왔습니다.</p>
+<p>이 주장에 대한 반론은 Java 가 처음부터 쉽게 읽을 수 있도록 설계되었다는 점입니다.
+많은 개발자들이 코드를 읽을 때 이런 타입에 대한 반복적인 정보가 도움이 된다는 것입니다.
+Java 는 종종 별도의 개발 팀과 운영 팀이 있는 엔터프라이즈 환경에서 널리 사용됩니다.
+이런 추가적인 장황함은 원작자의 손에서 벗어난 코드를 유지보수하는 면에서 유리할 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#75715e">// Files helper methods</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> contents <span style="color:#f92672">=</span> Files.<span style="color:#a6e22e">readAllBytes</span>(Paths.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;/home/ben/myFile.bin&#34;</span>));
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Diamond syntax for repeated type information</span>
+</span></span><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> l <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lambda expressions simplify Runnables</span>
+</span></span><span style="display:flex;"><span>ExecutorService threadPool <span style="color:#f92672">=</span> Executors.<span style="color:#a6e22e">newScheduledThreadPool</span>(2);
+</span></span><span style="display:flex;"><span>threadPool.<span style="color:#a6e22e">submit</span>(() <span style="color:#f92672">-&gt;</span> { System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;On Threadpool&#34;</span>); });
+</span></span></code></pre></div><p>Java 7+ 버전의 설계자는 혹시라도 구문이 모호해질 수 있는 위치를 찾고 타입 정보를 더 잘 활용하여 이러한 사항 중 일부에 대응하려고 시도했습니다.
+그러나 Java 의 전반적인 철학은 언어를 매우 천천히 그리고 신중하게 변경하는 것입니다. 따라서 이러한 변경 속도는 비방하는 사람들을 완전히 만족시키지 못할 수도 있습니다.</p>
+<br />
+<h2 id="다소-더딘-발전">다소 더딘 발전</h2>
+<p>Java 언어는 Microsoft C# 과 같은 다른 언어에 비해 버전 출시가 매우 더디게 진행되었습니다.
+이는 이전 버전과 호환되지 않는 경우가 많았지만, 일부 개발자는 Java 가 그렇게 하지 않는다고 비판합니다.</p>
+<p>그리고 일반적으로 Java 언어는 다른 언어에서 흔히 볼 수 있는 패러다임들을 느리게 채택한다는 이유로 비난을 받고 있습니다.</p>
+<p>Sun Microsystems 및 Oracle 이 보여준 언어 설계에 대한 보수적인 접근 방식은
+잘못된 설계로 Java 기술을 이미 채택한 많은 기업들에게 부정적인 영향을 주지 않으려는 목적이 컸습니다.</p>
+<p>새로운 기능은 그 기능 자체보다도 기존 기능과 문제 없이 상호작용하게끔 설계되어야 합니다.
+새로운 기능은 종종 예상치 못한 부작용을 초래할 수 있기 때문입니다.
+Java 는 대규모 코드베이스에서 널리 사용되고 있기 때문에, 이러한 문제가 발생할 확률이 높습니다.</p>
+<p>출시된 이후에 문제를 야기하는 기능을 아예 제거하는 것은 거의 불가능합니다.
+예시로 Object 클래스의 finalize 같은 메서드만 봐도 잘못된 설계가 얼마나 큰 논란을 야기하는 지를 보여줍니다.</p>
+<p>더딘 출시였지만 Java 8 에서 도입된 새로운 기능들은 개발자들의 많은 요청사항을 해소해주었다고 평가받고 있습니다.</p>
+<br />
+<h2 id="성능-문제">성능 문제</h2>
+<p>Java 플랫폼은 때때로 느리다는 비판을 받기도 합니다.
+그러나 플랫폼에 대한 모든 비판 중에서 아마도 이것이 가장 타당하지 않은 비판일 것입니다.</p>
+<p>Java 1.3 버전에서 JIT 컴파일러가 포함된 Hotspot JVM 이 등장하였습니다.
+그 이후로 거의 15년 동안 JVM 의 성능이 지속적으로 혁신되고 개선되었으며, Java 플랫폼은 놀라울 정도로 빠릅니다.
+인기 있는 프레임워크의 성능 벤치마크에서도 정기적으로 승리하고, 때로는 C/C++ 의 네이티브 컴파일 방식만큼 성능이 탁월합니다.</p>
+<p>이 분야에 대한 비판은 과거 어느 시점에서 파생된 Java 성능에 대한 편견으로 보입니다.
+Java 가 사용된 더 크고 더 확장된 아키텍처 중 일부에 대한 비판 역시 이러한 편견에서 비롯되었을 가능성이 있습니다.
+사실 대규모 아키텍처에서는 최상의 결과를 얻으려면 벤치마킹과 분석 및 성능 조정이 필요하며 Java 도 예외는 아닙니다.</p>
+<p>현실적으로 플랫폼의 핵심인 Java 언어와 JVM 의 성능은 결코 나쁘다고 보기 힘듭니다.</p>
+<br />
+<h2 id="보안-취약점">보안 취약점</h2>
+<p>과거 2013년에 Java 플랫폼에 다수의 보안 취약점이 발견되었고, 이로 인해 Java 8 버전의 출시 일정이 연기되었습니다.
+이 전에도 일부 사람들은 Java 의 보안 취약점 기록을 비판했습니다.</p>
+<p>이러한 취약점 중 다수는 Java 시스템의 데스크톱 및 GUI 구성 요소와 관련되어 있습니다.
+이는 Java 로 작성된 웹 관련 또는 서버사이드 코드에는 거의 영향을 미치지 않습니다.</p>
+<p>모든 프로그래밍 플랫폼에는 때때로 보안 문제가 있습니다.
+그리고 다른 많은 언어 역시 덜 알려졌지만 상당한 보안 취약점의 역사가 있습니다.</p>
+<br />
+<h2 id="너무-기업에-특화되어-있다">너무 기업에 특화되어 있다</h2>
+<p>Java 는 엔터프라이즈 레벨에서 특히 광범위하게 사용하는 플랫폼이기에 너무 기업적이라는 비판은 그다지 새롭지는 않습니다.
+다만 이로 인해 Java 언어가 커뮤니티를 통해 성장한 다른 언어에 비해 자유로운 느낌이 부족하다는 의견도 있습니다.</p>
+<p>Oracle 의 행보에 따라 변화가 있을 수는 있겠지만, 현재 언어 자체에 대한 가장 널리 사용된 구현들은 OpenJDK 기반입니다.
+OpenJDK 는 활발하고 성장하는 커뮤니티를 갖춘 오픈 소스 프로젝트입니다.</p>
+<br />
+</div>
+    <nav>
+      <div class="prev">
+        
+          <a href="/posts/summary/java/introduce/5/">Java 와 다른 언어의 비교</a>
+        
+      </div>
+      <div class="next">
+        
+      </div>
+    </nav>
+  </div>
+  <script
+  src="https://utteranc.es/client.js"
+  repo="konerds/konerds.github.io"
+  issue-term="pathname"
+  label="comment"
+  theme="dark-blue"
+  crossorigin="anonymous"
+  async
+></script>
+
+
+        </main>
+      </div>
+      <footer class="footer">
+  
+    <span>
+      © 2023 konerds,
+      Built with
+      <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+      <a
+        href="https://github.com/LordMathis/hugo-theme-nightfall"
+        class="footerLink"
+        >Nightfall</a
+      >
+      theme
+    </span>
+  
+</footer>
+
+    </div>
+  </body>
+</html>
+

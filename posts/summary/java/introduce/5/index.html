@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <title>
-      Java 보안 | konerds
+      Java 와 다른 언어의 비교 | konerds
     </title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta
@@ -11,7 +11,7 @@
 />
 <meta name="generator" content="Hugo 0.120.4">
 
-<link rel="canonical" href="https://konerds.github.io/posts/summary/java/introduce/4/" />
+<link rel="canonical" href="https://konerds.github.io/posts/summary/java/introduce/5/" />
 <link href="/sass/main.min.44df6b98c301d60a529ef9e2b108d780eda420acd690758defc00acd4b88b109.css" rel="stylesheet" />
 <script
   async
@@ -92,9 +92,9 @@
 
     <h1>
       
-        #4 -
+        #5 -
       
-      Java 보안
+      Java 와 다른 언어의 비교
     </h1>
     
       <section class="postMetadata">
@@ -118,30 +118,54 @@
         </dl>
       </section>
     
-    <div><h1 id="java-보안">Java 보안</h1>
-<p>Java 언어는 처음부터 보안을 염두에 두고 설계되었습니다. 이는 다른 많은 기존 시스템 및 플랫폼에 비해 큰 이점을 제공합니다.</p>
-<p>Java 보안 아키텍처는 보안 전문가에 의해 설계되었으며, 플랫폼이 시작된 이래로 다른 많은 보안 전문가에 의해 연구되고 검증되었습니다.</p>
-<p>Java 보안 아키텍처의 근본은 바이트 코드가 표현할 수 있는 내용에 강한 제약을 두는 것입니다.
-예를 들어 Java 에서는 메모리를 직접 처리할 수 없으며, 이는 GC(Garbage Collector)를 통해 간접적으로 이루어집니다.
-이는 C/C++ 등 하드웨어와 가깝게 설계된 기존 언어를 괴롭혔던 보안 문제이기도 합니다.
-또한 JVM 클래스 로더는 바이트 코드 검증 과정을 통해 신뢰할 수 있는 클래스만을 읽어냅니다.</p>
-<p>물론 그럼에도 불구하고 그 어떤 시스템도 100% 보안을 보장할 수는 없으며 Java 도 예외는 아닙니다.
-이론적으로 견고하게 설계되었다고 할 지라도 보안 아키텍처의 구현은 또 다른 문제입니다.</p>
-<p>실제로 특정 Java 구현에서 보안 취약점이 발견되어 개선되었던 지난 역사가 있습니다.
-특히 Java 8 의 출시는 상당한 노력이 필요한 다수의 보안 문제가 발견되어 부분적으로 지연되었습니다.
-앞으로도 계속 JVM 구현에서 보안 취약점이 발견될 가능성은 존재합니다.</p>
-<p>그러나 최근 Java 의 보안 취약점의 대부분은 데스크탑 기술 분야와 밀접하게 연관되어 있었다는 점도 주목할 가치가 있습니다.
-현실적으로 서버 사이드 코딩의 경우, Java 는 현재도 굉장히 안전한 범용 플랫폼으로 평가받고 있습니다.</p>
-<br /></div>
+    <div><h1 id="java-와-다른-언어의-비교">Java 와 다른 언어의 비교</h1>
+<br />
+<h2 id="java-vs-c">Java vs C</h2>
+<ul>
+<li>Java 는 객체 지향적인 반면, C 는 절차 지향적입니다.</li>
+<li>Java 는 바이트 코드 파일로 이식이 가능한 반면, C 는 재컴파일이 필요합니다.</li>
+<li>Java 는 런타임 도중 바이트 코드를 변경하는 기능을 가지고 있습니다.</li>
+<li>Java 에는 포인터 및 포인터 산술이 존재하지 않습니다.</li>
+<li>Java 는 가비지 컬렉션을 통해 자동으로 메모리를 관리할 수 있습니다.</li>
+<li>Java 에는 구조체가 존재하지 않으며, 로우 레벨에서 메모리를 배치하는 기능이 없습니다.</li>
+<li>Java 에는 전처리기가 없습니다.</li>
+</ul>
+<br />
+<h2 id="java-vs-c-1">Java vs C++</h2>
+<ul>
+<li>Java 는 C++ 에 비해 단순화된 객체 모델을 가지고 있습니다.</li>
+<li>Java 의 디스패치는 기본적으로 가상입니다.</li>
+<li>Java 는 항상 값으로 전달됩니다. (객체 참조 역시 포인터 개념과는 다름)</li>
+<li>Java 는 완전한 다중 상속을 지원하지 않습니다.</li>
+<li>Java 의 제네릭은 C++ 템플릿보다 덜 효율적일 수 있으나, 보다 안전합니다.</li>
+<li>Java 에는 연산자 오버로딩이 존재하지 않습니다.</li>
+</ul>
+<br />
+<h2 id="java-vs-php">Java vs PHP</h2>
+<ul>
+<li>Java 는 정적으로 타입이 지정되나, PHP 는 동적으로 타입이 지정됩니다.</li>
+<li>Java 는 PHP 에 비해 범용적으로 사용되는 언어입니다.</li>
+<li>Java 는 다중 스레드로 동작하나, PHP 는 그렇지 않습니다.</li>
+</ul>
+<br />
+<h2 id="java-vs-javascript">Java vs Javascript</h2>
+<ul>
+<li>Java 는 정적으로 타입이 지정되나, Javascript 는 동적으로 타입이 지정됩니다.</li>
+<li>Java 는 클래스 기반 객체를 사용하나, Javascript 는 프로토타입을 기반으로 합니다.</li>
+<li>Java 에는 네임스페이스 개념이 존재하나, Javascript 에는 존재하지 않습니다.</li>
+<li>Java 는 다중 스레드로 동작하나, Javascript 는 그렇지 않습니다.</li>
+</ul>
+<br />
+</div>
     <nav>
       <div class="prev">
         
-          <a href="/posts/summary/java/introduce/3/">Java 프로그램의 생명주기</a>
+          <a href="/posts/summary/java/introduce/4/">Java 보안</a>
         
       </div>
       <div class="next">
         
-          <a href="/posts/summary/java/introduce/5/">Java 와 다른 언어의 비교</a>
+          <a href="/posts/summary/java/introduce/6/">Java에 대한 일부 비판에 대한 답변</a>
         
       </div>
     </nav>
